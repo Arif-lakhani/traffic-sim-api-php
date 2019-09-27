@@ -35,16 +35,16 @@
           $this->Id = htmlspecialchars(strip_tags($this->Id));
           $this->latitude = htmlspecialchars(strip_tags($this->latitude));
           $this->longitude = htmlspecialchars(strip_tags($this->longitude));
-          $this->pvId = htmlspecialchars(strip_tags($this->ttnpoint));
+          $this->pvId = htmlspecialchars(strip_tags($this->pvId));
           $this->svId = htmlspecialchars(strip_tags($this->svId));
           $this->timestopped = htmlspecialchars(strip_tags($this->timestopped));
           
           // Bind data
-          $stmt->bindParam(':Id', $this->ID);
-          $stmt->bindParam(':latitude', $this->pclatitude);
-          $stmt->bindParam(':longitude', $this->pclongitude);
-          $stmt->bindParam(':svId', $this->ttnpoint);
-          $stmt->bindParam(':pvId', $this->maxspeed);
+          $stmt->bindParam(':Id', $this->Id);
+          $stmt->bindParam(':latitude', $this->latitude);
+          $stmt->bindParam(':longitude', $this->longitude);
+          $stmt->bindParam(':svId', $this->svId);
+          $stmt->bindParam(':pvId', $this->pvId);
           $stmt->bindParam(':timestopped', $this->timestopped);
           // Execute query
           if($stmt->execute()) {
